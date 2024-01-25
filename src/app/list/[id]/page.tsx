@@ -24,11 +24,14 @@ export default async function PageList({ params }: { params: PathsItem }) {
 		<div className={styles.wrapper}>
 			{listItem &&
 				listItem.items.map((item) => (
-					<div key={item.id} className={styles.item}>
-						<Link href={`/item/${item.id}`} key={item.id} passHref>
-							{item.name}
-						</Link>
-					</div>
+					<Link
+						className={styles.item}
+						href={`/item/${item.id}`}
+						key={item.id}
+						passHref
+					>
+						{item.name}
+					</Link>
 				))}
 			{listItem.page <= 1 && (
 				<Btn nextPages={String(listItem.page + 1)}>Next</Btn>
