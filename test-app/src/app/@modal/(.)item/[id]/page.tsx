@@ -3,7 +3,7 @@ import { Iitem } from '../../../../interface/item.interface';
 import { Modal } from './modal';
 import styles from './page.module.css';
 
-export default async function PhotoModal({
+export default async function ItemModule({
 	params: { id }
 }: {
 	params: { id: string };

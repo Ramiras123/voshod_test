@@ -1,4 +1,5 @@
-import { Ilist } from '@/interface/list.interface';
+import { Ilist } from '../interface/list.interface';
+
 
 export async function getList(id: string) {
 	try {
@@ -10,7 +11,7 @@ export async function getList(id: string) {
 		);
 		const data: Ilist = await result.json();
 		return data;
-	} catch (e) {
+	} catch (e: any) {
 		throw new Error(e.message);
 	}
 }

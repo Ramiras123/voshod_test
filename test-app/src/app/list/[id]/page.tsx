@@ -19,7 +19,6 @@ export async function generateStaticParams() {
 
 export default async function PageList({ params }: { params: PathsItem }) {
 	const listItem: Ilist = await getList(params.id);
-	console.log(listItem);
 	const handleBtn = () => {};
 	return (
 		<div className={styles.wrapper}>

@@ -1,3 +1,5 @@
+import { Iitem } from '../interface/item.interface';
+
 export async function getItem(id: string) {
 	try {
 		const result = await fetch(
@@ -6,9 +8,9 @@ export async function getItem(id: string) {
 				method: 'GET'
 			}
 		);
-		const data = await result.json();
+		const data: Iitem = await result.json();
 		return data;
-	} catch (e) {
+	} catch (e: any) {
 		throw new Error(e.message);
 	}
 }
